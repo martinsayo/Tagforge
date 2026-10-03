@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TagForge — Hashtag generator for edits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="stage">
+    <header class="masthead">
+      <span class="glow-dot"></span>
+      <span class="masthead-label">TagForge</span>
+    </header>
+
+    <h1 class="headline">Captions & hashtags,<br>forged for your upload.</h1>
+    <p class="subhead">Set the type, tone, and topic — get a ready-to-paste caption and tag set for your description.</p>
+
+    <section class="panel">
+      <div class="field">
+        <label for="contentType">Content type</label>
+        <select id="contentType">
+          <option value="AMV">[AMV] Anime / Edit</option>
+          <option value="Vlog">[Vlog]</option>
+          <option value="Tutorial">[Tutorial]</option>
+          <option value="Short">[Short]</option>
+          <option value="Gaming">[Gaming]</option>
+          <option value="Promo">[Promo / Business]</option>
+          <option value="Lifestyle">[Lifestyle]</option>
+          <option value="Comedy">[Comedy / Meme]</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tone">Tone</label>
+        <select id="tone">
+          <option value="Hype">Hype</option>
+          <option value="Chill">Chill</option>
+          <option value="Funny">Funny</option>
+          <option value="Emotional">Emotional</option>
+          <option value="Professional">Professional</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="topicName">Topic / series / subject <span class="optional">(optional)</span></label>
+        <input type="text" id="topicName" placeholder="e.g. Jujutsu Kaisen, my morning routine, Valorant ranked" />
+      </div>
+
+      <div class="field">
+        <label for="appUsed">Edited with <span class="optional">(optional)</span></label>
+        <select id="appUsed">
+          <option value="CapCut">CapCut</option>
+          <option value="Alight Motion">Alight Motion</option>
+          <option value="Motion Ninja">Motion Ninja</option>
+          <option value="Other">Other / none</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="tagCount">Number of hashtags</label>
+        <select id="tagCount">
+          <option value="10">10</option>
+          <option value="20" selected>20</option>
+          <option value="30">30</option>
+        </select>
+      </div>
+
+      <button class="forge-btn" id="forgeBtn">Forge caption & tags</button>
+    </section>
+
+    <section class="result" id="captionSection" hidden>
+      <div class="result-header">
+        <span>Your caption</span>
+        <button class="copy-btn" id="copyCaptionBtn">Copy</button>
+      </div>
+      <p class="caption-output" id="captionOutput"></p>
+    </section>
+
+    <section class="result" id="resultSection" hidden>
+      <div class="result-header">
+        <span>Your hashtags</span>
+        <button class="copy-btn" id="copyBtn">Copy</button>
+      </div>
+      <p class="tag-output" id="tagOutput"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
